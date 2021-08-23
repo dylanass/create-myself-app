@@ -1,8 +1,9 @@
 import React, { useState, useCallback } from "react";
-import { Layout, Menu } from "antd";
+import { Button, Layout, Menu } from "antd";
 import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 import MenuConfig from "@/constants/MenuConfig";
 import { useHistory } from "react-router-dom";
+import "./BasicLayout.css";
 
 const { Header, Sider, Content } = Layout;
 
@@ -20,11 +21,11 @@ const BasicLayout = ({ children, ...props }: BasicLayoutProps) => {
   const handleClickMenu = useCallback((keyPath: string) => {
     history.push(keyPath);
   }, []);
-  
+
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div className="logo" />
+        <div className="logo">Logo</div>
         <Menu
           theme="dark"
           mode="inline"

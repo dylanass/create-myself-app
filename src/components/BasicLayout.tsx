@@ -1,9 +1,9 @@
 import React, { useState, useCallback } from "react";
-import { Button, Layout, Menu } from "antd";
+import { Layout, Menu } from "antd";
 import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 import MenuConfig from "@/constants/MenuConfig";
 import { useHistory } from "react-router-dom";
-import "./BasicLayout.css";
+import "./BasicLayout.scss";
 
 const { Header, Sider, Content } = Layout;
 

@@ -1,5 +1,6 @@
 import "./App.css";
 import Router from "./view";
+import "antd/dist/antd.css";
 
 function App() {
   return (

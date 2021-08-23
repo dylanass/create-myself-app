@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    // 添加 Alias 支持
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}

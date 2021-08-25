@@ -1,5 +1,5 @@
 import TableList from "@/view/tableList/TableList";
-import WorkList from "@/view/workList/WorkList";
+import BraftEditor from "@/view/braftEditor/BraftEditor";
 
 interface RouteItem {
   path: string;
@@ -12,8 +12,8 @@ const BasicRouteConfig: RouteItem[] = [
     component: () => <TableList />,
   },
   {
-    path: "/basic/work-list",
-    component: () => <WorkList />,
+    path: "/basic/braft-editor",
+    component: () => <BraftEditor />,
   },
 ];
 

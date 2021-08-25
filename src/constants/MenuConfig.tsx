@@ -10,9 +10,9 @@ interface MenuItem {
 
 const MenuConfig: MenuItem[] = [
   {
-    key: "workList",
-    name: "workList",
-    keyPath: "/basic/work-list",
+    key: "braftEditor",
+    name: "braftEditor",
+    keyPath: "/basic/braft-editor",
     icon: <DatabaseOutlined />,
   },
   {

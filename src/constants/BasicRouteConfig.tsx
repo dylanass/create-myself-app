@@ -1,5 +1,4 @@
-import TableList from "@/view/tableList/TableList";
-import BraftEditor from "@/view/braftEditor/BraftEditor";
+import LazyLoad from "@/components/LazyLoad";
 
 interface RouteItem {
   path: string;
@@ -9,11 +8,15 @@ interface RouteItem {
 const BasicRouteConfig: RouteItem[] = [
   {
     path: "/basic/table-list",
-    component: () => <TableList />,
+    component: () => (
+      <LazyLoad component={() => import("@/view/tableList/TableList")} />
+    ),
   },
   {
     path: "/basic/braft-editor",
-    component: () => <BraftEditor />,
+    component: () => (
+      <LazyLoad component={() => import("@/view/braftEditor/BraftEditor")} />
+    ),
   },
 ];
 

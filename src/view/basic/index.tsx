@@ -1,5 +1,5 @@
 import React from "react";
-import BasicLayout from "@/components/BasicLayout";
+import BasicLayout from "@/components/Layouts/BasicLayout";
 import { Route, Switch } from "react-router-dom";
 import BasicRouteConfig from "@/constants/BasicRouteConfig";
 

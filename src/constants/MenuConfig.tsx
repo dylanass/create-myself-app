@@ -27,6 +27,18 @@ const MenuConfig: MenuItem[] = [
     icon: <BarsOutlined />,
     keyPath: "/basic/antd-radio",
   },
+  {
+    key: "stringJs",
+    name: "stringJs",
+    icon: <BarsOutlined />,
+    keyPath: "/basic/string-js",
+  },
+  {
+    key: "voca",
+    name: "voca",
+    icon: <BarsOutlined />,
+    keyPath: "/basic/voca",
+  },
 ];
 
 export default MenuConfig;

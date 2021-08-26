@@ -18,6 +18,12 @@ const BasicRouteConfig: RouteItem[] = [
       <LazyLoad component={() => import("@/view/braftEditor/BraftEditor")} />
     ),
   },
+  {
+    path: "/basic/antd-radio",
+    component: () => (
+      <LazyLoad component={() => import("@/view/antd-radio/Radio")} />
+    ),
+  },
 ];
 
 export default BasicRouteConfig;

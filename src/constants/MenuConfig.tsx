@@ -21,6 +21,12 @@ const MenuConfig: MenuItem[] = [
     keyPath: "/basic/table-list",
     icon: <BarsOutlined />,
   },
+  {
+    key: "antdRadio",
+    name: "antdRadio",
+    icon: <BarsOutlined />,
+    keyPath: "/basic/antd-radio",
+  },
 ];
 
 export default MenuConfig;

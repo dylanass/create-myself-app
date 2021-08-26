@@ -38,6 +38,12 @@ const BasicRouteConfig: RouteItem[] = [
       <LazyLoad component={() => import("@/view/deal-string-method/Voca")} />
     ),
   },
+  {
+    path: "/basic/qs",
+    component: () => (
+      <LazyLoad component={() => import("@/view/qs-module/Qs")} />
+    ),
+  },
 ];
 
 export default BasicRouteConfig;

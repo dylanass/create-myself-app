@@ -39,6 +39,12 @@ const MenuConfig: MenuItem[] = [
     icon: <BarsOutlined />,
     keyPath: "/basic/voca",
   },
+  {
+    key: "qs",
+    name: "qs",
+    icon: <BarsOutlined />,
+    keyPath: "/basic/qs",
+  },
 ];
 
 export default MenuConfig;

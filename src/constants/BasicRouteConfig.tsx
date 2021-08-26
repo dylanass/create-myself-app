@@ -15,13 +15,27 @@ const BasicRouteConfig: RouteItem[] = [
   {
     path: "/basic/braft-editor",
     component: () => (
-      <LazyLoad component={() => import("@/view/braftEditor/BraftEditor")} />
+      <LazyLoad component={() => import("@/view/braft-editor/BraftEditor")} />
     ),
   },
   {
     path: "/basic/antd-radio",
     component: () => (
       <LazyLoad component={() => import("@/view/antd-radio/Radio")} />
+    ),
+  },
+  {
+    path: "/basic/string-js",
+    component: () => (
+      <LazyLoad
+        component={() => import("@/view/deal-string-method/StringJs")}
+      />
+    ),
+  },
+  {
+    path: "/basic/voca",
+    component: () => (
+      <LazyLoad component={() => import("@/view/deal-string-method/Voca")} />
     ),
   },
 ];

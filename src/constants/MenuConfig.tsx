@@ -45,6 +45,12 @@ const MenuConfig: MenuItem[] = [
     icon: <BarsOutlined />,
     keyPath: "/basic/qs",
   },
+  {
+    key: "flex-card",
+    name: "扩展卡片",
+    icon: <BarsOutlined />,
+    keyPath: "/basic/flex-card",
+  },
 ];
 
 export default MenuConfig;

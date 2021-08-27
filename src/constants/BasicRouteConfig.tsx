@@ -44,6 +44,12 @@ const BasicRouteConfig: RouteItem[] = [
       <LazyLoad component={() => import("@/view/qs-module/Qs")} />
     ),
   },
+  {
+    path: "/basic/flex-card",
+    component: () => (
+      <LazyLoad component={() => import("@/view/flex-card/FlexCard")} />
+    ),
+  },
 ];
 
 export default BasicRouteConfig;

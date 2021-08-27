@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  width: 78vw;
+}
+.container > .panel {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  flex: 0.3;
+  padding: 10px;
+  color: #fff;
+  border-radius: 50px;
+  margin: 10px;
+  transition: flex 1.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  cursor: pointer;
+  height: 78vh;
+}
+
+.container > .panel.active {
+  flex: 5;
+}

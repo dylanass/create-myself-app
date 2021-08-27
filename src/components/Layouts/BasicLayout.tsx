@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import { Layout, Menu } from "antd";
 import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 import MenuConfig from "@/constants/MenuConfig";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import "./BasicLayout.scss";
 
 const { Header, Sider, Content } = Layout;
@@ -13,6 +13,7 @@ interface BasicLayoutProps {
 
 const BasicLayout = ({ children, ...props }: BasicLayoutProps) => {
   const history = useHistory();
+  const location = useLocation();
   const [collapsed, setCollapsed] = useState(false);
   const handleToggle = useCallback(() => {
     setCollapsed(!collapsed);
@@ -29,11 +30,11 @@ const BasicLayout = ({ children, ...props }: BasicLayoutProps) => {
         <Menu
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={[MenuConfig[0].key]}
+          defaultSelectedKeys={[location.pathname ?? MenuConfig[0].keyPath]}
         >
           {MenuConfig.map((item) => (
             <Menu.Item
-              key={item.key}
+              key={item.keyPath}
               icon={item.icon}
               onClick={() => handleClickMenu(item.keyPath)}
             >

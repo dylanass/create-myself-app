@@ -129,7 +129,7 @@ export default function ProgressStep() {
 
   return (
     <div className="wrapper">
-      <div className="container">
+      <div className="progress-step-container">
         <div className="progress-container">
           <div id="progress" className="progress"></div>
           <div className="circle active">1</div>

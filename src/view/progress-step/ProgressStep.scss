@@ -1,0 +1,90 @@
+// .wrapper {
+//   overflow: hidden;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100%;
+// }
+$color: #dededf;
+$color_active: #2396ef;
+$default_color: #fff;
+$font_color: #535455;
+
+.container {
+  text-align: center;
+}
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+.progress-container::before {
+  content: "";
+  width: 100%;
+  background-color: $color;
+}
+
+.progress-container > .progress,
+.progress-container::before {
+  height: 5px;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.progress-container > .progress {
+  background-color: $color_active;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.progress-container > .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid $color;
+  width: 40px;
+  height: 40px;
+  color: $font_color;
+  border-radius: 50%;
+  background-color: $default_color;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+}
+
+.progress-container > .circle.active {
+  border-color: $color_active;
+}
+.prev,
+.next {
+  outline: none;
+  border: none;
+  display: inline-block;
+  background-color: $color;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: $font_color;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+.prev:active,
+.next:active {
+  transform: scale(0.9);
+}
+.prev.disabled,
+.next.disabled {
+  cursor: not-allowed;
+  background-color: $color;
+  color: $font_color;
+}
+.prev.active,
+.next.active {
+  background-color: $color_active;
+  color: $default_color;
+}
+.next {
+  margin-left: 15px;
+}

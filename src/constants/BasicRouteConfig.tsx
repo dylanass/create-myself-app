@@ -50,6 +50,12 @@ const BasicRouteConfig: RouteItem[] = [
       <LazyLoad component={() => import("@/view/flex-card/FlexCard")} />
     ),
   },
+  {
+    path: "/basic/progress-step",
+    component: () => (
+      <LazyLoad component={() => import("@/view/progress-step/ProgressStep")} />
+    ),
+  },
 ];
 
 export default BasicRouteConfig;

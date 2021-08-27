@@ -51,6 +51,12 @@ const MenuConfig: MenuItem[] = [
     icon: <BarsOutlined />,
     keyPath: "/basic/flex-card",
   },
+  {
+    key: "progress-step",
+    name: "步骤条",
+    icon: <BarsOutlined />,
+    keyPath: "/basic/progress-step",
+  },
 ];
 
 export default MenuConfig;

@@ -57,6 +57,12 @@ const MenuConfig: MenuItem[] = [
     icon: <BarsOutlined />,
     keyPath: "/basic/progress-step",
   },
+  {
+    key: "rotate",
+    name: "旋转",
+    icon: <BarsOutlined />,
+    keyPath: "/basic/rotate",
+  },
 ];
 
 export default MenuConfig;

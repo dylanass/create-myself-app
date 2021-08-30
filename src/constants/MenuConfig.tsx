@@ -63,6 +63,12 @@ const MenuConfig: MenuItem[] = [
     icon: <BarsOutlined />,
     keyPath: "/basic/rotate",
   },
+  {
+    key: "search-input",
+    name: "搜索框",
+    icon: <BarsOutlined />,
+    keyPath: "/basic/search-input",
+  },
 ];
 
 export default MenuConfig;

@@ -42,6 +42,10 @@ const BasicRouteConfig: RouteItem[] = [
     path: "/basic/rotate",
     component: () => <LazyLoad component={() => import("@/view/rotate/Rotate")} />,
   },
+  {
+    path: "/basic/search-input",
+    component: () => <LazyLoad component={() => import("@/view/search-input/SearchInput")} />,
+  },
 ];
 
 export default BasicRouteConfig;

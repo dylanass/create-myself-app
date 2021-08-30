@@ -1,9 +1,11 @@
+import useClientRect from "@/components/hooks/useClientRect";
 import { getSelectedText } from "@/utils";
 import React, { useState } from "react";
 import S from "string";
 
 export default function StringJs() {
   const [str, setStr] = useState(null);
+  const [rect, ref] = useClientRect();
   //下载 npm i string
   //取中间值
   const between = () => S("<a>This is a link</a>").between("<a>", "</a>").s;
@@ -33,7 +35,8 @@ export default function StringJs() {
         {"My, st[ring] *full* of %punct)"}:{stripPunctuation()}
       </div>
       <button onClick={handleSelect}>打印选中文本</button>
-      <div>{str}</div>
+      <div ref={ref}>{str}</div>
+      <div>height:{Math.round(rect?.height)}</div>
     </div>
   );
 }

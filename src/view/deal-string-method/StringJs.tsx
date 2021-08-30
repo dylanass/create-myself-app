@@ -1,18 +1,23 @@
-import React from "react";
+import { getSelectedText } from "@/utils";
+import React, { useState } from "react";
 import S from "string";
 
 export default function StringJs() {
+  const [str, setStr] = useState(null);
   //下载 npm i string
   //取中间值
   const between = () => S("<a>This is a link</a>").between("<a>", "</a>").s;
   //去掉破折号，下划线，变成驼峰 FooBAr
   const camelize = () => S("---Foo---bAr---").camelize().s;
   //将输入的内容转化为对人友好的形式
-  const humanize = () =>
-    S("   capitalize dash-CamelCase_underscore trim  ").humanize().s;
+  const humanize = () => S("   capitalize dash-CamelCase_underscore trim  ").humanize().s;
   //剥离给定字符串中所有的标点符号
-  const stripPunctuation = () =>
-    S("My, st[ring] *full* of %punct)").stripPunctuation().s;
+  const stripPunctuation = () => S("My, st[ring] *full* of %punct)").stripPunctuation().s;
+
+  const handleSelect = () => {
+    const str = getSelectedText();
+    setStr(str);
+  };
   return (
     <div>
       <div>
@@ -27,6 +32,8 @@ export default function StringJs() {
       <div>
         {"My, st[ring] *full* of %punct)"}:{stripPunctuation()}
       </div>
+      <button onClick={handleSelect}>打印选中文本</button>
+      <div>{str}</div>
     </div>
   );
 }

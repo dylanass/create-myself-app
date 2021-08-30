@@ -2,11 +2,6 @@ import usePersistFn from "@/components/hooks/usePersistFn";
 import React, { useEffect } from "react";
 import "./ProgressStep.scss";
 
-// let currentIndex = 1;
-// const circleElements = document.querySelectorAll("circle");
-// const max = circleElements.length,
-//   min = 1;
-
 export default function ProgressStep() {
   useEffect(() => {
     const $ = (v) => document.querySelector(v);
@@ -68,64 +63,9 @@ export default function ProgressStep() {
           item.classList.remove("active");
         }
       });
-      console.log("progress", progress);
       progress.style.width = ((100 / max) * currentActive).toFixed(4) + "%";
     }
   }, []);
-
-  // const handlePre = usePersistFn(() => {
-  //   const nextBtn = document.querySelector("#next");
-  //   const prevBtn = document.querySelector("#prev");
-  //   if (currentIndex === min) return;
-  //   if (currentIndex === min + 1)
-  //     handleClass(prevBtn).addClass("disabled").removeClass("active");
-  //   if (currentIndex === max)
-  //     handleClass(nextBtn).addClass("active").removeClass("disabled");
-  //   currentIndex--;
-  //   updateProgress();
-  // });
-
-  // const handleNext = usePersistFn(() => {
-  //   const nextBtn = document.querySelector("#next");
-  //   const prevBtn = document.querySelector("#prev");
-  //   if (currentIndex === max) return;
-  //   if (currentIndex === min)
-  //     handleClass(prevBtn).addClass("active").removeClass("disabled");
-  //   if (currentIndex === max - 1)
-  //     handleClass(nextBtn).addClass("disabled").removeClass("active");
-  //   currentIndex++;
-  //   updateProgress();
-  // });
-
-  // function handleClass(el) {
-  //   let methods = {
-  //     addClass,
-  //     removeClass,
-  //   };
-  //   function addClass(c) {
-  //     el.classList.add(c);
-  //     return methods;
-  //   }
-  //   function removeClass(c) {
-  //     el.classList.remove(c);
-  //     return methods;
-  //   }
-  //   return methods;
-  // }
-
-  // function updateProgress() {
-  //   const progress = document.querySelector("#progress");
-  //   const circleElements = document.querySelectorAll("circle");
-  //   circleElements.forEach((item, index) => {
-  //     if (index < currentIndex) {
-  //       item.classList.add("active");
-  //     } else {
-  //       item.classList.remove("active");
-  //     }
-  //   });
-  //   progress.style.width =
-  //     ((100 / max - 1) * (currentIndex - 1)).toFixed(4) + "%";
-  // }
 
   return (
     <div className="wrapper">

@@ -50,6 +50,12 @@ const BasicRouteConfig: RouteItem[] = [
     path: "/basic/filter",
     component: () => <LazyLoad component={() => import("@/view/filter/Filter")} />,
   },
+  {
+    path: "/basic/scroll-animation",
+    component: () => (
+      <LazyLoad component={() => import("@/view/scroll-animation/ScrollAnimation")} />
+    ),
+  },
 ];
 
 export default BasicRouteConfig;

@@ -69,6 +69,12 @@ const MenuConfig: MenuItem[] = [
     icon: <BarsOutlined />,
     keyPath: "/basic/search-input",
   },
+  {
+    key: "filter",
+    name: "过滤效果",
+    icon: <BarsOutlined />,
+    keyPath: "/basic/filter",
+  },
 ];
 
 export default MenuConfig;

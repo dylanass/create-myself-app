@@ -10,7 +10,7 @@ export const characterCount = (str, char) => str.split(char).length - 1;
 
 /**
  * @constructor
- * @description 检查对象是否为空
+ * @description 检查对象是否为空  （不会收 defineProperties 配置 enumerable 的影响）不考虑用Object.keys()也可
  * @example
  * // return true
  * isEmpty({})

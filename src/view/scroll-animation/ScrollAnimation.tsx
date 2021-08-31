@@ -34,6 +34,7 @@ export default function ScrollAnimation() {
       }
       let triggerBottom = (window.innerHeight / 5) * 4;
       boxElements.forEach((box, index) => {
+        
         //@todo top有负数？
         const top = box.getBoundingClientRect().top;
         console.log("top :>> ", top);

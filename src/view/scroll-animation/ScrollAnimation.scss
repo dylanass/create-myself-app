@@ -19,6 +19,7 @@
     width: 100%;
     max-width: 350px;
     //todo height失效
+    flex-shrink: 0;
     height: 250px;
     background: linear-gradient(to right, #9accf1, #4497fe);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);

@@ -75,6 +75,12 @@ const MenuConfig: MenuItem[] = [
     icon: <BarsOutlined />,
     keyPath: "/basic/filter",
   },
+  {
+    key: "scroll-animation",
+    name: "滚动加载",
+    icon: <BarsOutlined />,
+    keyPath: "/basic/scroll-animation",
+  },
 ];
 
 export default MenuConfig;

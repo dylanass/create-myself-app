@@ -1,0 +1,168 @@
+.container-wrapper {
+  height: 100vh;
+  //   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f3eac0, #daae20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //  夜空纹理
+  //   background-color: black;
+  //   background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 40px),
+  //     radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+  //     radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+  //     radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
+  //   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  //   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+
+  // 全栈蓝
+  //   background-image: linear-gradient(90deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%),
+  //     linear-gradient(360deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%);
+  //   background-size: 20px 20px;
+  //   background-position: center center;
+
+  //星星纹理
+  //   background: linear-gradient(324deg, #232927 4%, transparent 4%) -70px 43px,
+  //     linear-gradient(36deg, #232927 4%, transparent 4%) 30px 43px,
+  //     linear-gradient(72deg, #e3d7bf 8.5%, transparent 8.5%) 30px 43px,
+  //     linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -70px 43px,
+  //     linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -70px 23px,
+  //     linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 30px 23px,
+  //     linear-gradient(324deg, #232927 4%, transparent 4%) -20px 93px,
+  //     linear-gradient(36deg, #232927 4%, transparent 4%) 80px 93px,
+  //     linear-gradient(72deg, #e3d7bf 8.5%, transparent 8.5%) 80px 93px,
+  //     linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -20px 93px,
+  //     linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -20px 73px,
+  //     linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 80px 73px;
+  //   background-color: rgba(0, 0, 0, 0);
+  //   background-size: auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto;
+  //   background-color: #232927;
+  //   background-size: 100px 100px;
+
+  // 波浪纹理
+  //   background: linear-gradient(#ffffff 50%, rgba(255, 255, 255, 0) 0) 0 0,
+  //     radial-gradient(circle closest-side, #ffffff 53%, rgba(255, 255, 255, 0) 0) 0 0,
+  //     radial-gradient(circle closest-side, #ffffff 50%, rgba(255, 255, 255, 0) 0) 55px 0 #48b;
+  //   background-repeat: repeat, repeat, repeat;
+  //   background-size: auto, auto, auto;
+  //   background-size: 110px 200px;
+  //   background-repeat: repeat-x;
+
+  // 足球纹理
+  //   background: radial-gradient(black 3px, transparent 4px),
+  //     radial-gradient(black 3px, transparent 4px), linear-gradient(#fff 4px, transparent 0),
+  //     linear-gradient(
+  //       45deg,
+  //       transparent 74px,
+  //       transparent 75px,
+  //       #a4a4a4 75px,
+  //       #a4a4a4 76px,
+  //       transparent 77px,
+  //       transparent 109px
+  //     ),
+  //     linear-gradient(
+  //       -45deg,
+  //       transparent 75px,
+  //       transparent 76px,
+  //       #a4a4a4 76px,
+  //       #a4a4a4 77px,
+  //       transparent 78px,
+  //       transparent 109px
+  //     ),
+  //     #fff;
+  //   background-position-x: 0%, 0%, 0%, 0%, 0%, 0%;
+  //   background-position-y: 0%, 0%, 0%, 0%, 0%, 0%;
+  //   background-size: auto, auto, auto, auto, auto, auto;
+  //   background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  //   background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+
+  .container {
+    position: relative;
+    padding: 30px 40px;
+    // background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+    background: radial-gradient(#b1560b, #e7bf91, #eba140, #f3d9c0);
+    border-radius: 15px;
+
+    & > form > h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 30px;
+      font-size: 26px;
+      //强制所有字符被转换为大写
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    & > form > .form-control {
+      position: relative;
+      width: 350px;
+      margin: 20px 0 20px;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    & > form > .form-control > input {
+      width: 100%;
+      display: block;
+      border: none;
+      border-bottom: 3px solid #fff;
+      background: transparent;
+      padding: 15px 0;
+      font-size: 18px;
+      color: #fff;
+      outline: none;
+    }
+
+    & > form > .form-control > input:focus,
+    & > form > .form-control > input:valid {
+      border-color: #2396ef;
+      color: #2396ef;
+    }
+
+    & > form > .form-control > input:focus + label span,
+    & > form > .form-control > input:valid + label span {
+      transform: translateY(-25px);
+      color: #2396ef;
+    }
+
+    & > form > .form-control > label {
+      position: absolute;
+      left: 0;
+      top: 15px;
+      color: #fff;
+    }
+
+    & > form > .form-control > label > span {
+      display: inline-block;
+      min-width: 5px;
+      font-size: 18px;
+      transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+
+    & > form > .form-control > .btn {
+      width: 100%;
+      display: inline-block;
+      padding: 16px 18px;
+      color: #fff;
+      outline: none;
+      border-radius: 4px;
+      border: 1px solid #8e78ee;
+      background-color: #7467e9;
+      font-size: 18px;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+
+    & > form > .form-control > .btn:hover {
+      background-color: #2d20df;
+      border-color: #2416dd;
+    }
+
+    & > form > .form-control > a {
+      text-decoration: none;
+      color: #3e5ce6;
+      font-size: 18px;
+      text-transform: capitalize;
+    }
+  }
+}

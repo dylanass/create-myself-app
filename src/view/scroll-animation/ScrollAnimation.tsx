@@ -34,8 +34,7 @@ export default function ScrollAnimation() {
       }
       let triggerBottom = (window.innerHeight / 5) * 4;
       boxElements.forEach((box, index) => {
-        
-        //@todo top有负数？
+        //@todo top有负数？ 当前元素具体可视化窗口顶部的距离
         const top = box.getBoundingClientRect().top;
         console.log("top :>> ", top);
         if (top <= triggerBottom) {

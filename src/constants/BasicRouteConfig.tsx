@@ -1,5 +1,8 @@
 import LazyLoad from "@/components/LazyLoad";
 
+/**
+ * @description 菜单栏路由枚举
+ */
 interface RouteItem {
   path: string;
   component: () => JSX.Element;

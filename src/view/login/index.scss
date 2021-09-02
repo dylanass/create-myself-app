@@ -106,11 +106,14 @@
       display: block;
       border: none;
       border-bottom: 3px solid #fff;
-      background: transparent;
-      padding: 15px 0;
       font-size: 18px;
       color: #fff;
+      //去掉聚焦高亮
       outline: none;
+      //去掉自动填充背景色
+      height: 0;
+      padding: 30px 0 26px;
+      background-clip: content-box;
     }
 
     & > form > .form-control > input:focus,
@@ -127,6 +130,8 @@
 
     & > form > .form-control > label {
       position: absolute;
+      //解决 label遮挡input问题
+      height: 0;
       left: 0;
       top: 15px;
       color: #fff;

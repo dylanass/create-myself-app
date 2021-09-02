@@ -12,7 +12,18 @@ interface LoginPageProps {
  */
 
 const LoginPage = (props: LoginPageProps) => {
+  const handleSubmit = usePersistFn(() => {
+    const email = document.querySelector(".email") as any;
+    console.log("email.value :>> ", email.value);
+  });
+
   useEffect(() => {
+    const email = document.querySelector(".email") as any;
+    console.log("email.value :>> ", email.value);
+    // setTimeout(() => {
+    //   console.log("email.value :>> ", email.value);
+    // }, 1000);
+
     const labels = document.querySelectorAll(".form-control label");
     const createLetter = (v) =>
       v
@@ -27,22 +38,22 @@ const LoginPage = (props: LoginPageProps) => {
      * @todo 获取input value
      */
     // const email = document.querySelector("#email") as any;
-  }, []);
+  });
   return (
     <div className="container-wrapper">
       <div className="container">
-        <form>
+        <form name="login" autoComplete="off">
           <h1>please login</h1>
-          <div className="form-control email">
-            <input type="text" required />
+          <div className="form-control ">
+            <input type="text" required className="email" />
             <label data-value="Email"></label>
           </div>
-          <div className="form-control password">
+          <div className="form-control ">
             <input type="password" required />
             <label data-value="PassWord"></label>
           </div>
           <div className="form-control">
-            <button type="button" className="btn">
+            <button type="button" className="btn" onClick={handleSubmit}>
               login
             </button>
           </div>

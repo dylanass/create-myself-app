@@ -171,3 +171,9 @@
     }
   }
 }
+
+//  -webkit-box-shadow 浏览器私有属性
+// 讲道理 也能设 input 自动填充色 但是这里没生效...
+// input:-webkit-autofill {
+//   -webkit-box-shadow: none !important;
+// }

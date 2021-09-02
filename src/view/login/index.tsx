@@ -19,10 +19,10 @@ const LoginPage = (props: LoginPageProps) => {
 
   useEffect(() => {
     const email = document.querySelector(".email") as any;
-    console.log("email.value :>> ", email.value);
+    console.log("email.value :>> ", email.getAttribute("value"));
     // setTimeout(() => {
     //   console.log("email.value :>> ", email.value);
-    // }, 1000);
+    // }, 100);
 
     const labels = document.querySelectorAll(".form-control label");
     const createLetter = (v) =>

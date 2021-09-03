@@ -76,3 +76,98 @@ export const getRandomBoolean = () => Math.random() >= 0.5;
  * @returns {number}
  */
 export const average = (arr) => arr.reduce((a, b) => a + b) / arr.length;
+
+/**
+ * 判断值是否错误 过滤掉0
+ * @param {any} value
+ * @returns {boolean}
+ */
+export const isFalsy = (value) => (value === 0 ? false : !value);
+
+/**
+ *
+ * @param {any} value
+ * @returns {boolean}
+ */
+export const isVoid = (value) => value === undefined || value === null || value === "";
+
+/**
+ * 去除对象中value为空(null,undefined,'')的属性
+ * @param object
+ * @returns {object}
+ */
+export const cleanObject = (object) => {
+  // Object.assign({}, object)
+  if (!object) {
+    return {};
+  }
+  const result = { ...object };
+  Object.keys(result).forEach((key) => {
+    const value = result[key];
+    if (isVoid(value)) {
+      delete result[key];
+    }
+  });
+  return result;
+};
+
+/**
+ * 获取文件后缀名
+ * @param {String} filename
+ */
+export function getExt(filename) {
+  if (typeof filename == "string") {
+    return filename.split(".").pop().toLowerCase();
+  } else {
+    throw new Error("filename must be a string type");
+  }
+}
+
+/**
+ * 复制内容到剪贴板
+ * @param value
+ * @returns
+ */
+export function copyToBoard(value) {
+  const element = document.createElement("textarea");
+  document.body.appendChild(element);
+  element.value = value;
+  element.select();
+  if (document.execCommand("copy")) {
+    document.execCommand("copy");
+    document.body.removeChild(element);
+    return true;
+  }
+  document.body.removeChild(element);
+  return false;
+}
+
+/**
+ * 休眠xxxms
+ * @param {Number} milliseconds
+ */
+export function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+//使用方式
+// const fetchData = async () => {
+//   await sleep(1000);
+// };
+
+/**
+ * 对象转化为formdata
+ * @param {Object} object
+ */
+
+export function getFormData(object) {
+  const formData = new FormData();
+  Object.keys(object).forEach((key) => {
+    const value = object[key];
+    if (Array.isArray(value)) {
+      value.forEach((subValue, i) => formData.append(key + `[${i}]`, subValue));
+    } else {
+      formData.append(key, object[key]);
+    }
+  });
+  return formData;
+}

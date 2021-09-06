@@ -99,6 +99,12 @@ const MenuConfig: MenuItem[] = [
     icon: <BarsOutlined />,
     keyPath: "/basic/content-placeholder",
   },
+  {
+    key: "tailwind-css",
+    name: "css 原子化",
+    icon: <BarsOutlined />,
+    keyPath: "/basic/tailwind-css",
+  },
 ];
 
 export default MenuConfig;

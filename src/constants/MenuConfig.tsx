@@ -93,6 +93,12 @@ const MenuConfig: MenuItem[] = [
     icon: <BarsOutlined />,
     keyPath: "/basic/nav-animation",
   },
+  {
+    key: "content-placeholder",
+    name: "骨架屏",
+    icon: <BarsOutlined />,
+    keyPath: "/basic/content-placeholder",
+  },
 ];
 
 export default MenuConfig;

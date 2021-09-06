@@ -69,6 +69,12 @@ const BasicRouteConfig: RouteItem[] = [
       <LazyLoad component={() => import("@/view/animated-navigation/AnimatedNavigation")} />
     ),
   },
+  {
+    path: "/basic/content-placeholder",
+    component: () => (
+      <LazyLoad component={() => import("@/view/content-placeholder/ContentPlaceholder")} />
+    ),
+  },
 ];
 
 export default BasicRouteConfig;

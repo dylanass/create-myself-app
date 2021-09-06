@@ -87,6 +87,12 @@ const MenuConfig: MenuItem[] = [
     icon: <BarsOutlined />,
     keyPath: "/basic/audio",
   },
+  {
+    key: "nav-animation",
+    name: "动态导航栏",
+    icon: <BarsOutlined />,
+    keyPath: "/basic/nav-animation",
+  },
 ];
 
 export default MenuConfig;

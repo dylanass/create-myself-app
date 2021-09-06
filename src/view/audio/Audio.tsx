@@ -8,7 +8,9 @@ export default function Audio() {
   const handlePlay = usePersistFn((el) => {
     const audio = document.querySelector(`#${el}`) as any;
     //@todo  The element has no supported sources.
-    audio.play();
+    setTimeout(() => {
+      audio.play();
+    }, 5);
   });
 
   useEffect(() => {

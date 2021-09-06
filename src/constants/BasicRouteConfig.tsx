@@ -59,6 +59,10 @@ const BasicRouteConfig: RouteItem[] = [
       <LazyLoad component={() => import("@/view/scroll-animation/ScrollAnimation")} />
     ),
   },
+  {
+    path: "/basic/audio",
+    component: () => <LazyLoad component={() => import("@/view/audio/Audio")} />,
+  },
 ];
 
 export default BasicRouteConfig;

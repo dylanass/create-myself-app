@@ -81,6 +81,12 @@ const MenuConfig: MenuItem[] = [
     icon: <BarsOutlined />,
     keyPath: "/basic/scroll-animation",
   },
+  {
+    key: "audio",
+    name: "音频播放器",
+    icon: <BarsOutlined />,
+    keyPath: "/basic/audio",
+  },
 ];
 
 export default MenuConfig;

@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "React";
+import React, { useState, useCallback } from "react";
 
 /**
  * @typedef {Object} RectItem

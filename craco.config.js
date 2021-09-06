@@ -8,4 +8,10 @@ module.exports = {
       "@": resolveToStaticPath("./src"),
     },
   },
+
+  style: {
+    postcss: {
+      plugins: [require("tailwindcss"), require("autoprefixer")],
+    },
+  },
 };

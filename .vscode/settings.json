@@ -1,4 +1,7 @@
 {
   // "javascript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.locale": "zh-CN"
+  "typescript.locale": "zh-CN",
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import BasicLayout from "@/components/Layouts/BasicLayout";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import BasicRouteConfig from "@/constants/BasicRouteConfig";
 
 interface BasicPageProps {
@@ -8,6 +8,7 @@ interface BasicPageProps {
 }
 
 const BasicPage = (props: BasicPageProps) => {
+  let redirect = BasicRouteConfig.filter((v) => v.redirect);
   return (
     <BasicLayout>
       <Switch>
@@ -15,6 +16,9 @@ const BasicPage = (props: BasicPageProps) => {
           <Route path={item.path} key={item.path} component={item.component} />
         ))}
       </Switch>
+      {redirect.map((v, i) => (
+        <Redirect key={i} from={v.path} to={v.redirect} />
+      ))}
     </BasicLayout>
   );
 };

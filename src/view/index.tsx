@@ -8,37 +8,34 @@ import routes from "@/constants/routes-config";
 import renderRoutes from "@/utils/renderRoutes";
 
 export default React.memo(function index() {
-  let redirect = routes.filter((v) => v.redirect);
   return (
     <Router>
       <Switch>
-        <Route path="/" component={App}>
+        {/* <Route path="/" component={App}>
           <Switch>
             <Route path="/login" component={LoginPage} />
             <Route path="/basic" component={BasicPage} />
             <Route path="/404" component={NotFound} />
             <Redirect to="/404" />
           </Switch>
-        </Route>
+        </Route> */}
 
         {/**
          * @todo map routes 报错
          */}
-        {/* {routes.map((v: any, i: number) => {
+        {routes.map((v: any, i: number) => {
           return (
             <Route
               path={v.path}
               key={i}
               render={(props) => {
                 // return <div>123</div>;
+                console.log("v.component :>> ", v.component);
                 return <v.component {...props}></v.component>;
               }}
             />
           );
         })}
-        {redirect.map((v, i) => (
-          <Redirect key={i} from={v.path} to={v.redirect} />
-        ))} */}
       </Switch>
     </Router>
   );

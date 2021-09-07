@@ -79,10 +79,6 @@ const BasicRouteConfig: RouteItem[] = [
     path: "/basic/tailwind-css",
     component: () => <LazyLoad component={() => import("@/view/tailwind-css/TailwindCss")} />,
   },
-  {
-    path: "/basic/404",
-    component: () => <LazyLoad component={() => import("@/view/tailwind-css/TailwindCss")} />,
-  },
 ];
 
 export default BasicRouteConfig;

@@ -16,7 +16,7 @@ export default function FlexCard() {
     });
   }, []);
   return (
-    <div className="container">
+    <div className="flex-container">
       <div
         className="panel active"
         style={{

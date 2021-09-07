@@ -41,7 +41,7 @@ const LoginPage = (props: LoginPageProps) => {
   });
   return (
     <div className="container-wrapper">
-      <div className="container">
+      <div className="login-container">
         <form name="login" autoComplete="off">
           <h1>please login</h1>
           <div className="form-control ">

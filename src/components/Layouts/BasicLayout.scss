@@ -7,3 +7,9 @@
   color: #fff !important;
   margin-left: 10px;
 }
+
+// 菜单栏过长产生内滚
+.ant-menu {
+  max-height: calc(100vh - 64px);
+  overflow-y: scroll;
+}

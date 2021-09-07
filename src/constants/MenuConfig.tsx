@@ -105,6 +105,12 @@ const MenuConfig: MenuItem[] = [
     icon: <BarsOutlined />,
     keyPath: "/basic/tailwind-css",
   },
+  {
+    key: "not-found",
+    name: "404页面",
+    icon: <BarsOutlined />,
+    keyPath: "/basic/404",
+  },
 ];
 
 export default MenuConfig;

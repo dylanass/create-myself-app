@@ -5,7 +5,8 @@ import LazyLoad from "@/components/LazyLoad";
  */
 interface RouteItem {
   path: string;
-  component: () => JSX.Element;
+  redirect?: string;
+  component?: () => JSX.Element;
 }
 
 const BasicRouteConfig: RouteItem[] = [
@@ -78,6 +79,10 @@ const BasicRouteConfig: RouteItem[] = [
   {
     path: "/basic/tailwind-css",
     component: () => <LazyLoad component={() => import("@/view/tailwind-css/TailwindCss")} />,
+  },
+  {
+    path: "/basic",
+    redirect: "/basic/table-list",
   },
 ];
 

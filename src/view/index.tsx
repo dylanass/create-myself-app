@@ -1,27 +1,47 @@
 import App from "@/App";
 import React from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import LoginPage from "@/view/login";
 import BasicPage from "@/view/basic";
 import NotFound from "@/view/not-found-page/NotFoundPage";
+import routes from "@/constants/routes-config";
+import renderRoutes from "@/utils/renderRoutes";
 
-export default function index() {
+export default React.memo(function index() {
+  let redirect = routes.filter((v) => v.redirect);
   return (
-    <BrowserRouter>
+    <Router>
       <Switch>
         <Route path="/" component={App}>
           <Switch>
             <Route path="/login" component={LoginPage} />
             <Route path="/basic" component={BasicPage} />
-            {/**
-             * @todo 404 或匹配不到 跳转到 NotFound
-             */}
             <Route path="/404" component={NotFound} />
-            {/* <Route component={NotFound} /> */}
             <Redirect to="/404" />
           </Switch>
         </Route>
+
+        {/**
+         * @todo map routes 报错
+         */}
+        {/* {routes.map((v: any, i: number) => {
+          return (
+            <Route
+              path={v.path}
+              key={i}
+              render={(props) => {
+                // return <div>123</div>;
+                return <v.component {...props}></v.component>;
+              }}
+            />
+          );
+        })}
+        {redirect.map((v, i) => (
+          <Redirect key={i} from={v.path} to={v.redirect} />
+        ))} */}
       </Switch>
-    </BrowserRouter>
+    </Router>
   );
-}
+});
+
+// export default React.memo(() => <Router>{renderRoutes(routes)}</Router>);

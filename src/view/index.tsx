@@ -28,9 +28,8 @@ export default React.memo(function index() {
             <Route
               path={v.path}
               key={i}
+              exact={v.exact}
               render={(props) => {
-                // return <div>123</div>;
-                console.log("v.component :>> ", v.component);
                 return <v.component {...props}></v.component>;
               }}
             />

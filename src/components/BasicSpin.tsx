@@ -11,6 +11,10 @@ const spinStyles = {
 interface BasicSpinProps {
   tip?: string;
   size?: "small" | "default" | "large";
+  spinning?: boolean;
+  delay?: number;
+  indicator?: React.ReactElement<HTMLElement, string | React.JSXElementConstructor<any>>;
+  wrapperClassName?: string;
 }
 
 export default function BasicSpin({

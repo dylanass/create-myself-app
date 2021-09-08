@@ -1,17 +1,10 @@
-import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-// import memoize from "memoize-one";
+import { Switch, Route } from "react-router-dom";
+import memoize from "memoize-one";
 
 function renderRoutes(routes) {
   return routes ? (
     <Switch>
-      {[
-        ...routes,
-        // 处理没有路由的 404 页面
-        {
-          component: () => <Redirect to="/error/404" />,
-        },
-      ].map((route, i) => {
+      {routes.map((route, i) => {
         if (!route) {
           return null;
         }
@@ -24,15 +17,10 @@ function renderRoutes(routes) {
             exact={route.exact}
             strict={route.strict}
             render={(props) => {
-              return (
-                <>
-                  {route.render ? (
-                    route.render({ ...props, route })
-                  ) : (
-                    <route.component {...props} route={route} />
-                  )}
-                </>
-              );
+              if (route.routes) {
+                return <Component {...props} route={route}></Component>;
+              }
+              return <Component {...props}></Component>;
             }}
           />
         );
@@ -41,4 +29,4 @@ function renderRoutes(routes) {
   ) : null;
 }
 
-export default renderRoutes;
+export default memoize(renderRoutes);

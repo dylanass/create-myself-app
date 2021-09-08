@@ -1,37 +1,15 @@
 import LazyLoad from "@/components/LazyLoad";
 import NotFoundPage from "@/view/not-found-page/NotFoundPage";
 import { Redirect } from "react-router-dom";
+import BasicRouteConfig from "./BasicRouteConfig";
 
 const routes = [
   {
     path: "/basic",
-    exact: true,
-    component: () => <LazyLoad component={() => import("@/view/basic")} />,
-    // children: [
-    //   {
-    //     path: "/home/composition",
-    //     component: Composition,
-    //   },
-    //   {
-    //     path: "/home/flows",
-    //     component: Flows,
-    //     auth: true,
-    //   },
-    //   {
-    //     path: "/home/user",
-    //     component: User,
-    //     auth: true,
-    //   },
-    //   {
-    //     path: "/home/source",
-    //     component: Source,
-    //     auth: true,
-    //   },
-    //   {
-    //     path: "/home",
-    //     redirect: "/home/composition",
-    //   },
-    // ],
+    //有routes 不能开严格模式
+    // exact: true,
+    component: (props) => <LazyLoad {...props} component={() => import("@/view/basic")} />,
+    routes: BasicRouteConfig,
   },
   {
     path: "/login",

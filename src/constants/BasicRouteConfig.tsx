@@ -1,4 +1,5 @@
 import LazyLoad from "@/components/LazyLoad";
+import { Redirect } from "react-router-dom";
 
 /**
  * @description 菜单栏路由枚举
@@ -6,10 +7,16 @@ import LazyLoad from "@/components/LazyLoad";
 interface RouteItem {
   path: string;
   redirect?: string;
+  exact?: boolean;
   component?: () => JSX.Element;
 }
 
 const BasicRouteConfig: RouteItem[] = [
+  {
+    path: "/basic/",
+    exact: true,
+    component: () => <Redirect to="/basic/table-list" />,
+  },
   {
     path: "/basic/table-list",
     component: () => <LazyLoad component={() => import("@/view/tableList/TableList")} />,
@@ -79,10 +86,6 @@ const BasicRouteConfig: RouteItem[] = [
   {
     path: "/basic/tailwind-css",
     component: () => <LazyLoad component={() => import("@/view/tailwind-css/TailwindCss")} />,
-  },
-  {
-    path: "/basic",
-    redirect: "/basic/table-list",
   },
 ];
 

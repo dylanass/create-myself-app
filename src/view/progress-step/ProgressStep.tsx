@@ -1,4 +1,3 @@
-import usePersistFn from "@/components/hooks/usePersistFn";
 import React, { useEffect } from "react";
 import "./ProgressStep.scss";
 
@@ -11,8 +10,7 @@ export default function ProgressStep() {
     // const progress = $("#progress");
     const progress = document.querySelector("#progress") as any;
     const circleElements = $$(".circle");
-    const min = 0,
-      max = circleElements.length - 1;
+    const max = circleElements.length - 1;
     let currentActive = 0;
     nextBtn.addEventListener("click", () => {
       if (nextBtn.classList.contains("disabled")) return;

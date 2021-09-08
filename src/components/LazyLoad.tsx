@@ -1,6 +1,5 @@
 import * as React from "react";
-// import PageLoader from "@/components/layouts/PageLoader";
-import { Spin } from "antd";
+import BasicSpin from "./BasicSpin";
 
 interface LazyLoadProps {
   component: () => Promise<{ default: any }>;
@@ -8,11 +7,7 @@ interface LazyLoadProps {
   [key: string]: any;
 }
 
-export default function LazyLoad({
-  component,
-  loader = <Spin />,
-  ...props
-}: LazyLoadProps) {
+export default function LazyLoad({ component, loader = <BasicSpin />, ...props }: LazyLoadProps) {
   return (
     <React.Suspense fallback={loader}>
       {React.createElement(React.lazy<any>(component), props)}

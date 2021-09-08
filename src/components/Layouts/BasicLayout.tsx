@@ -4,6 +4,7 @@ import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 import MenuConfig from "@/constants/MenuConfig";
 import { useHistory, useLocation } from "react-router-dom";
 import "./BasicLayout.scss";
+import usePersistFn from "../hooks/usePersistFn";
 
 const { Header, Sider, Content } = Layout;
 
@@ -19,9 +20,9 @@ const BasicLayout = ({ children, ...props }: BasicLayoutProps) => {
     setCollapsed(!collapsed);
   }, [collapsed]);
 
-  const handleClickMenu = useCallback((keyPath: string) => {
+  const handleClickMenu = usePersistFn((keyPath: string) => {
     history.push(keyPath);
-  }, []);
+  });
 
   return (
     <Layout>
@@ -45,13 +46,10 @@ const BasicLayout = ({ children, ...props }: BasicLayoutProps) => {
       </Sider>
       <Layout className="site-layout">
         <Header className="site-layout-background" style={{ padding: 0 }}>
-          {React.createElement(
-            collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
-            {
-              className: "trigger",
-              onClick: handleToggle,
-            }
-          )}
+          {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+            className: "trigger",
+            onClick: handleToggle,
+          })}
         </Header>
         <Content
           className="site-layout-background"

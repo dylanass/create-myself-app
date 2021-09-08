@@ -14,7 +14,7 @@ export default function ContentPlaceholder() {
         <div className="card">
           <div className="card-header animated-bg" id="card-header"></div>
           <div className="card-content">
-            <h3 className="card-title animated-bg animated-bg-text" id="card-title"></h3>
+            <div className="card-title animated-bg animated-bg-text" id="card-title"></div>
             <p className="card-message" id="card-message">
               <span className="animated-bg animated-bg-text"></span>
               <span className="animated-bg animated-bg-text"></span>

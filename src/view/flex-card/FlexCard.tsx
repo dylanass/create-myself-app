@@ -3,7 +3,7 @@ import "./FlexCard.scss";
 
 export default function FlexCard() {
   useEffect(() => {
-    const panelItems = document.querySelectorAll(".container > .panel");
+    const panelItems = document.querySelectorAll(".flex-container > .panel");
     panelItems.forEach((item) => {
       item.addEventListener("click", () => {
         // [].filter
